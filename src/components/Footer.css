@@ -1,0 +1,97 @@
+.footer {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+  animation: fadeUp 1s ease;
+}
+
+/* TITLE */
+.footer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.footer-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+/* ICONS */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+/* ICON STYLE */
+.footer-icons a {
+  font-size: 1.6rem;
+  color: #cbd5f5;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* HOVER GLOW */
+.footer-icons a:hover {
+  color: #7c3aed;
+  transform: translateY(-5px) scale(1.2);
+  text-shadow: 0 0 10px rgba(124, 58, 237, 0.8);
+}
+
+/* COPY */
+.footer-copy {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 15px;
+}
+
+/* TOP BORDER GLOW LINE */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  transform: translateX(-50%);
+  animation: glowLine 3s linear infinite;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowLine {
+  0% { width: 0; opacity: 0; }
+  50% { width: 200px; opacity: 1; }
+  100% { width: 0; opacity: 0; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 1.6rem;
+  }
+}

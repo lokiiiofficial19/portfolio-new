@@ -1,0 +1,99 @@
+/* 🔥 GLASS EFFECT NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 8%;
+
+  /* 💎 Glass + Gradient */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(124, 58, 237, 0.8));
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+  z-index: 1000;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔥 LOGO STYLE */
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #ffffff, #e0f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+/* LINKS STYLE */
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 HOVER EFFECT (GLOW + SCALE) */
+.nav-links a:hover {
+  color: #ffdd57;
+  transform: scale(1.1);
+}
+
+/* 🔥 UNDERLINE ANIMATION */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #ffdd57;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* 🔥 MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 25px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    display: none;
+  }
+}
+
+/* 🔥 FIX HERO OVERLAP */
+.hero {
+  margin-top: 80px;
+}
+/* Active link highlight */
+.nav-links a.active {
+  color: #ffdd57;
+  font-weight: bold;
+}

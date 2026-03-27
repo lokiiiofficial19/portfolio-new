@@ -1,0 +1,138 @@
+.about-section {
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+}
+
+/* TITLE */
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* LAYOUT */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* TEXT */
+.about-text {
+  max-width: 500px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+
+.about-text span {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.about-text p {
+  line-height: 1.7;
+  color: #cbd5f5;
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+
+/* LIST */
+.about-list {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+  margin-left: 80px;
+  color: coral;
+}
+
+.about-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* BUTTON */
+.about-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-left: 80px;
+}
+
+.about-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* IMAGE 3D EFFECT */
+.about-image {
+  perspective: 1000px;
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 20px;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+
+  animation: float3d 5s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+/* 🔥 HOVER 3D */
+.about-image img:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes float3d {
+  0% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateY(8deg);
+  }
+  100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  
+    margin-right: 80px;
+  }
+
+  .about-image img {
+    width: 220px;
+    margin-left: 70px;
+  }
+}
